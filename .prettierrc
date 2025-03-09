@@ -6,5 +6,5 @@
   "endOfLine": "lf",
   "semi": true,
   "parser": "angular",
-  "overrides": [{ "files": "*.html", "options": { "parser": "angular" } }]
+  "overrides": [{ "files": "*.html", "options": { "parser": "angular" } }, { "files": "*.scss", "options": { "parser": "scss" } }]
 }

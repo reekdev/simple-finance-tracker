@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  grid-area: footer;
+  background-color: blue;
+
+  @media (max-width: 425px) {
+    position: sticky;
+    bottom: 0;
+  }
+}

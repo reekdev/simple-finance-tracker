@@ -1,0 +1,49 @@
+// @use './../../../../styles/_variables.scss';
+
+:host {
+  display: block;
+  grid-area: sidebar;
+  position: relative;
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 425px) {
+    position: fixed;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+aside {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: white;
+  line-height: 1.5;
+  padding: 16px;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.24rem;
+  }
+
+  /* Track: this is the background of the thumb */
+  &::-webkit-scrollbar-track {
+    background: var(--primary-100);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-200);
+    border-radius: 99999px;
+    cursor: pointer;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-300);
+  }
+}
