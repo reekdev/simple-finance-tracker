@@ -1,1 +1,7 @@
-<h2>Simple Finance Tracker</h2>
+@let isAuthenticated = false;
+
+@if (isAuthenticated) {
+  <app-auth-layout></app-auth-layout>
+} @else {
+  <app-non-auth-layout></app-non-auth-layout>
+}

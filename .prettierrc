@@ -5,12 +5,6 @@
   "trailingComma": "none",
   "endOfLine": "lf",
   "semi": true,
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": {
-        "parser": "angular"
-      }
-    }
-  ]
+  "parser": "angular",
+  "overrides": [{ "files": "*.html", "options": { "parser": "angular" } }]
 }
