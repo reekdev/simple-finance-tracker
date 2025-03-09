@@ -62,7 +62,8 @@
           "buildTarget": "simple-finance-tracker:build:production"
         },
         "development": {
-          "buildTarget": "simple-finance-tracker:build:development"
+          "buildTarget": "simple-finance-tracker:build:development",
+          "port": 3737
         }
       },
       "defaultConfiguration": "development"
