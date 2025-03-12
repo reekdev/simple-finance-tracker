@@ -1,7 +1,9 @@
 :host {
-  display: block;
   grid-area: footer;
-  background-color: blue;
+  background-color: var(--primary-400);
+
+  display: grid;
+  place-content: center;
 
   @media (max-width: 425px) {
     position: sticky;

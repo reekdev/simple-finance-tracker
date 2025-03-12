@@ -30,3 +30,18 @@
   --secondary-800: color-mix(in oklab, var(--secondary-color-base) 30%, black);
   --secondary-900: color-mix(in oklab, var(--secondary-color-base) 15%, black);
 }
+
+:root {
+  --app-header-height: calc(100dvh * 0.08);
+  --app-footer-height: calc(100dvh * 0.08);
+  --app-sidebar-width: 254px;
+  --app-sidebar-footer-height: 60px;
+}
+
+body[data-sidebar-state='opened'] {
+  --app-sidebar-width: 254px;
+}
+
+body[data-sidebar-state='closed'] {
+  --app-sidebar-width: 80px;
+}

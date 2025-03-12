@@ -2,8 +2,24 @@
   display: block;
   grid-area: main;
   line-height: 1.8;
+  transition: background-color 150ms linear;
+
+  &[sidebar-state='open'] {
+    @media (max-width: 425px) {
+      background-color: rgb(0 0 0 / 0.4);
+      // transform: scale(0.9388235294117647) translate3d(0, 14px, 0);
+      // transform-origin: center top;
+    }
+  }
+
+  &[sidebar-state='close'] {
+  }
 }
 
 main {
-  padding: 32px;
+  padding-inline: 16px;
+
+  section.main__header {
+    height: var(--app-header-height);
+  }
 }
