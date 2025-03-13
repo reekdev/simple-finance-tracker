@@ -1,7 +1,13 @@
 @let sidebarState = this.sidebarState();
 
 <div class="sidebar_toggle__button_container">
-  <button #sidebarStateToggleBtn (click)="toggleSidebar($event)" type="button" [attr.sidebar-state]="sidebarState">
+  <button
+    #sidebarStateToggleBtn
+    (click)="toggleSidebar($event)"
+    type="button"
+    [attr.sidebar-state]="sidebarState"
+    class="sidebar__header_close_button_large_screen"
+  >
     <span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)">
         <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
@@ -12,8 +18,31 @@
 
 <aside>
   <section class="sidebar__header">
-    <h2>Sidebar Header</h2>
-    <!-- <button (click)="closeSidebar()">close</button> -->
+    <span class="sidebar__header_heading">Sidebar Header</span>
+    <button
+      class="sidebar__header_close_button_small_screen"
+      (click)="closeSidebar()"
+      [attr.sidebar-state]="sidebarState"
+    >
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--primary-400)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-circle-chevron-right"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M11 9l3 3l-3 3" />
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0z" />
+        </svg>
+      </span>
+    </button>
   </section>
 
   <section class="sidebar__content">

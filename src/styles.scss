@@ -38,6 +38,13 @@
   --app-sidebar-footer-height: 60px;
 }
 
+// styles related to small screen background transition when the sidebar is opened
+:root {
+  --small-screen-sidebar-open-background-transform: scale(0.9388235294117647) translate3d(0, 14px, 0);
+  --small-screen-sidebar-open-background-transition-duration: 240ms;
+  --small-screen-sidebar-open-background-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 body[data-sidebar-state='opened'] {
   --app-sidebar-width: 254px;
 }

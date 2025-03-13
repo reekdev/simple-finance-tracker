@@ -8,5 +8,21 @@
   @media (max-width: 425px) {
     position: sticky;
     bottom: 0;
+    transition-property: transform, border-radius;
+    transition-duration: var(--small-screen-sidebar-open-background-transition-duration);
+    transition-timing-function: var(--small-screen-sidebar-open-background-transition-timing-function);
+    will-change: transform;
+
+    &[sidebar-state='open'] {
+      transform: var(--small-screen-sidebar-open-background-transform);
+      transform-origin: center top;
+      border-radius: 0 0 8px 0;
+    }
+
+    &[sidebar-state='close'] {
+      transform: scale(1) translate3d(0, 0, 0);
+      transform-origin: center top;
+      border-radius: 0 0 0 0;
+    }
   }
 }
